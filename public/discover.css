@@ -1,0 +1,184 @@
+
+.cards {
+    padding: 3vw;
+    width: 100vw;
+    margin-left: 10vw;
+    display: grid;
+    gap: 3vw;
+    grid-template: repeat(5, 1fr)/repeat(5, 1fr);
+    grid-template-areas:
+        "c1 c1 c2 c3 c3"
+        "c1 c1 c4 c5 c5"
+        "c6 c6 c7 c7 c8"
+        "c9 c9 c7 c7 c10"
+        "c11 c11 c12 c13 c13";
+    justify-items: center;
+}
+
+.card {
+    display: grid;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    transition: transform 0.2s linear;
+    background-color: #7f5539;
+    box-shadow: 0px 0px 15px 0px black;
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+}
+
+.card>img {
+    grid-area: bnr;
+    width: 100%;
+    height: 100%;
+}
+
+.card>.info {
+    grid-area: inf;
+    background-color: #b08968;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.card>.price {
+    grid-area: prc;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    background-color: #7eb42d;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.card.big {
+    grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+    grid-template-areas:
+        "bnr bnr bnr bnr"
+        "bnr bnr bnr bnr"
+        "bnr bnr bnr bnr"
+        "inf inf inf prc";
+
+}
+
+.card.small {
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    grid-template-areas:
+        "bnr bnr"
+        "bnr bnr"
+        "inf prc";
+}
+
+.card.long {
+    grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+    grid-template-areas:
+        "bnr bnr bnr inf"
+        "bnr bnr bnr prc";
+}
+#c1 {
+    grid-area: c1;
+}
+
+#c2 {
+    grid-area: c2;
+}
+
+#c3 {
+    grid-area: c3;
+}
+
+#c4 {
+    grid-area: c4;
+}
+
+#c5 {
+    grid-area: c5;
+}
+
+#c6 {
+    grid-area: c6;
+}
+
+#c7 {
+    grid-area: c7;
+}
+
+#c8 {
+    grid-area: c8;
+}
+
+#c9 {
+    grid-area: c9;
+}
+
+#c10 {
+    grid-area: c10;
+}
+#c11 {
+    grid-area: c11;
+}
+#c12 {
+    grid-area: c12;
+}
+#c13 {
+    grid-area: c13;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .cards {
+        grid-template: repeat(10, 1fr)/repeat(2, 1fr);
+        grid-template-areas:
+            "c1 c2"
+            "c3 c4"
+            "c5 c6"
+            "c7 c8"
+            "c9 c10";
+    }
+
+    .card.big {
+        grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+        grid-template-areas:
+            "bnr bnr"
+            "bnr bnr"
+            "inf prc";
+
+    }
+
+    .card.long {
+        grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+        grid-template-areas:
+            "bnr bnr"
+            "bnr bnr"
+            "inf prc";
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .cards {
+        margin-left: 0;
+        grid-template: repeat(10, 1fr)/1fr;
+        grid-template-areas:
+            "c1"
+            "c2"
+            "c3"
+            "c4"
+            "c5"
+            "c6"
+            "c7"
+            "c8"
+            "c9"
+            "c10";
+    }
+}

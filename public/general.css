@@ -1,0 +1,294 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input
+{
+    border: #7f5539 1px solid;
+    background-color: #e6ccb2;
+}
+input:focus
+{
+    outline: none;
+}
+button
+{
+    border: #7f5539 1px solid;
+    background-color: #e6ccb2;
+}
+
+@font-face {
+    font-family: Treasure;
+    src: url("resources/fonts/Treasuremap-Ea1vj.ttf");
+}
+@font-face {
+    font-family: Treasure2;
+    src: url("resources/fonts/Thedarkestpearl-9Ym8Z.ttf");
+}
+@keyframes breath {
+    from
+    {
+        background-color: #b08968;
+    }
+    to
+    {
+        background-color: #deaf88;
+    }
+}
+@keyframes flash {
+    from
+    {
+        color: #a89215;
+    }
+    to
+    {
+        color: #e2c521;
+    }
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    background-color: #e6ccb2;
+    overflow-x: hidden;
+}
+header
+{
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    padding-right: 2.5vw;
+    height: auto;
+    justify-content: flex-end;
+    align-items: baseline;
+    cursor: default;
+}
+.flash
+{
+    animation: flash 0.5s linear, flash 0.5s linear reverse 0.5s;
+}
+.header-container
+{
+    margin-right:12vw;
+}
+.logo
+{
+    font-size: 5rem;
+    font-family: Treasure;
+    text-shadow: 2px 2px black;
+    color:#a89215;
+}
+.motto
+{
+    font-size: 2rem;
+    font-family: Treasure;
+    text-shadow: 1px 1px black;
+    color:#656565
+}
+main
+{
+    margin-top: 5vh;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav
+{
+    width: auto;
+    height: 50vh;
+    padding: 0.5vw;
+    margin-left: 1vw;
+    position: fixed;
+    bottom: 17.5vh;
+    border: #7f5539 5px solid ;
+    background-color: #b08968;
+    box-shadow: 0px 0px 15px 0px black;
+}
+nav .links
+{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.links li
+{
+
+    display: flex;
+    padding: 0.4vw;
+    border-radius: 10%;
+    height: 10vh;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+}
+.links li:hover
+{
+    animation: breath 0.5s linear alternate infinite;
+}
+.links li a
+{
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+    font-size: 1.4rem;
+}
+
+footer
+{
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    color:white;
+    background-color: #7f5539;
+    font-size: 1rem;
+}
+.dropdown
+{
+    margin-top: 2vh;
+    font-size: 1.4rem;
+    color:white;
+    height: auto;
+}
+.dropdown>p:first-of-type
+{
+    padding: 1vw;
+    border: #7f5539 5px solid;
+    background-color: #b08968;
+    box-shadow: 0px 0px 15px 0px black;
+    transition: box-shadow 0.3s step-end;
+}
+.dropdown-content
+{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0px;
+    position: relative;
+    border: #7f5539 0px solid;
+    border-top: none;
+    background-color: inherit;
+    justify-content: center;
+    background-color: #b08968;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out,border-width 0.3s step-end;
+}
+.dropdown-content>a
+{
+    color: white;
+    text-decoration: none;
+    
+}
+.dropdown-content>a:hover
+{
+    animation: breath 0.5s linear alternate infinite;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: flex;
+    max-height: 50vh;
+    border: #7f5539 5px solid;
+    border-top: none;
+    transition: max-height 0.3s ease-in,border-width 0.3s step-start;
+}
+
+.dropdown
+{
+    transition: box-shadow 0.3s step-end;
+}
+
+.dropdown:hover
+{
+    box-shadow: 0px 0px 15px 0px black;
+    transition: box-shadow 0.3s step-start;
+}
+.dropdown:hover>p:first-of-type
+{
+    box-shadow: none;
+    transition: box-shadow 0.3s step-start;
+}
+@media only screen and (max-width: 1176px) {
+
+.logo
+{
+    font-size: 4.5rem;
+}
+.motto
+{
+    font-size:1.5rem;
+}
+}
+@media only screen and (max-width: 1176px) {
+
+.logo
+{
+    font-size: 4rem;
+}
+}
+@media only screen and (max-width: 768px) {
+.logo
+{
+    font-size: 4rem;
+}
+.motto
+{
+    display: none;
+}
+main
+{
+    padding-left:10vw;
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+nav
+{
+    width: 94vw;
+    height: auto;
+    margin-left: 3vw;
+    position: sticky;
+    top:0;
+    margin-top: 3vh;
+}
+nav .links
+{
+    flex-direction: row;
+}
+
+.logo
+{
+    font-size: 3rem;
+}
+main
+{
+    width: 100vw;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left:0;
+}
+}

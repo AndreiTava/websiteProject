@@ -1,0 +1,218 @@
+@keyframes fade {
+    from
+    {
+        opacity:0;
+    }
+
+    to
+    {
+        opacity:1;
+    }
+}
+
+main
+{
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.slideshow
+{
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+    margin-right: 1vw;
+    width: 60vw;
+    height: 65vh;
+    background-image: url("resources/icons/coins.webp");
+    border: 10px solid #b08968;
+    box-shadow: 0px 0px 15px 0px black;
+}
+.slideshow button
+{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+.slideshow button img
+{
+    width: 20px;
+    height: 20px;
+}
+
+.slide
+{
+    display: flex;
+    height: 90%;
+    flex-grow: 1;
+    max-width: 100%;
+    animation: fade 0.5s linear;
+}
+.slide *
+{
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.search
+{
+    color: white;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-right: 1vw;
+    display: flex;
+    position: relative;
+    float: right;
+    padding: 0;
+    justify-content: flex-start;
+    height: 60vh;
+    width: 12vw;
+    border: #7f5539 5px solid;
+    background-color: #b08968;
+    box-shadow: 0px 0px 15px 0px black;
+    transition: width 0.3s linear;
+}
+.search.big
+{
+    width: 20vw;
+}
+#expand
+{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    align-self: center;
+}
+#expand img
+{
+    height: 15px;
+    width: 15px;
+}
+#left-container
+{
+    padding:0;
+    margin:0;
+    padding-top:25%;
+    display: block;
+    min-width: 0vw;
+    width: 0vw;
+    overflow: hidden;
+    border:none;
+    transition: width 0.3s linear;
+}
+#left-container *
+{
+    width: 100%;
+    margin-bottom: 1vh;
+}
+#min
+{
+    width: 40%;
+}
+#max
+{
+    width: 40%;
+}
+#right-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: -1px;
+    width: 12vw;
+    overflow-y: auto;
+    border-left: #7f5539 0px solid;
+    transition: border-left 0.3s step-end;
+}
+.result
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 5%;
+    border:#7f5539 5px solid;
+    text-decoration: none;
+}
+.result:hover
+{
+    transform: scale(1.05);
+}
+.result *
+{
+    max-width: 100%;
+    flex-grow: 1;
+}
+.search.big>#right-container
+{
+    border-left:#7f5539 5px solid;
+    transition: border-left 0.3s step-start;
+}
+.search.big>#left-container
+{
+    width: 8vw;
+    padding-right:5px;
+}
+#left-container input[type="radio"]
+{
+   width: 1vw;
+}
+#search-box
+{
+    margin: 0.3vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#search-box button
+{
+    width: 20%;
+    height: 3vh;
+}
+#search-box button>img
+{
+    width: 100%;
+    height: 100%;
+}
+#search-box input
+{
+    width: 80%;
+    height: 3vh;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+.slideshow
+{
+    height: 50vh;
+    width: 85%;
+}
+.search
+{
+    display: none;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+.slideshow
+{
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+}

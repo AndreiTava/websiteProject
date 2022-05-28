@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="info.css">
+    <script src="general.js" async></script>
+    <script src="info.js" async></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">The Treasure Trove</h1>
+            <h4 class="motto">"Discover hidden gems"</h4>
+        </div>
+        <div class="dropdown">
+            <p>Account</p>
+            <div class="dropdown-content">
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul class="links">
+            <li>
+                <a href="main.html">Main Page</a>
+            </li>
+            <li>
+                <a href="discover.html">Discover</a>
+            </li>
+            <li><a href="info.html">Questions</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="qna">
+            <form method="post" action="http://localhost:8000/questions" id="question-form">
+                <label for="question-field">Ask us a question:</label>
+                <textarea class = "text-field" id="question-field" name="question" rows="5" cols="100"></textarea>
+                <button type="submit">Submit Question</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        &copy; 2022 IHateFrontEnd
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+
+#login-form
+{
+    width: 20vw;
+    height: 30vh;
+    margin-top: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    border: #7f5539 5px solid;
+    background-color: #b08968;
+    box-shadow: 0px 0px 15px 0px black;
+    color: white;
+    font-size: 2rem;
+}
+#login-form label
+{
+    text-align: center;
+}
+#login-form input
+{
+    width: 15vw;
+    height: 3vh;
+    margin: 5px;
+}
+#login-form button
+{
+    width: 7vw;
+    height: 3vh;
+    margin: 5px;
+}
+#logout 
+{
+    display: none;
+}
+#error-text
+{
+    display: none;
+    color:red;
+    font-size: 1.5rem;
+}
+#welcome-msg
+{
+    text-align:center;
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+
+    #login-form {
+        margin-top: 5vh;
+        width: 45vw;
+        height: 50vh;
+    }
+    #login-form input
+    {
+        width: 39vw;
+        height: 7vh;
+        margin: 5px;
+    }
+    #login-form button
+    {
+        width: 39vw;
+        height: 7vh;
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #login-form {
+        width: 93vw;
+        margin-left: 0vw;
+    }
+    #login-form input
+    {
+        width: 83vw;
+        height: 7vh;
+        margin: 5px;
+    }
+    #login-form button
+    {
+        width: 83vw;
+        height: 7vh;
+        margin: 5px;
+    }
+
+}

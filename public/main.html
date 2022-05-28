@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" async></script>
+    <script src="general.js" async></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">The Treasure Trove</h1>
+            <h4 class="motto">"Discover hidden gems"</h4>
+        </div>
+        <div class="dropdown">
+            <p>Account</p>
+            <div class="dropdown-content">
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul class="links">
+            <li>
+                <a href="main.html">Main Page</a>
+            </li>
+            <li>
+                <a href="discover.html">Discover</a>
+            </li>
+            <li>
+                <a href="info.html">Questions</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="slideshow">
+            <button id="lbtn"><img src="resources/icons/arrowleft.png" alt="&lt;"></button>
+            <button id="rbtn"><img src="resources/icons/arrowright.png" alt="&gt;"></button>
+        </div>
+        <div class="search">
+            <button id="expand"><img src="resources/icons/arrowleft.png" alt="&lt;"></button>
+            <fieldset form="search-box" id="left-container">
+                <p>Tags:</p>
+                <input type="radio" id="roguelike" value="Roguelike" name="tags">
+                <label for="roguelike">Roguelike<br></label>
+                <input type="radio" id="metroidvania" value="Metroidvania" name="tags">
+                <label for="metroidvania">Metroidvania<br></label>
+                <input type="radio" id="platformer" value="Platformer" name="tags">
+                <label for="platformer">Platformer<br></label>
+                <input type="radio" id="sandbox" value="Sandbox" name="tags">
+                <label for="sandbox">Sandbox<br></label>
+                <input type="radio" id="story" value="Story" name="tags">
+                <label for="story">Story<br></label>
+                <p>Price Range:</p>
+                <input type="number" id="min" name="min" min="0" max="60" step="0.1" value="0">
+                <input type="number" id="max" name="max" min="0" max="60" step="0.1" value="60">
+                <label for="category"></label>
+                <label for="crazy">Crazy Factor:</label>
+                <input type="range" id="crazy" name="crazy" min="0" max="69" step="1">
+                <label for="lucky">I'm feeling lucky</label>
+                <input type="checkbox" id="lucky">
+            </fieldset>
+            <div id="right-container">
+                <form id="search-box">
+                    <label for="search">Search:</label>
+                    <input type="text" id="search" name="search" placeholder="Search">
+                    <button type="button" id="search_btn">
+                        <img src="resources/icons/search.png" alt="S">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2022 IHateFrontEnd
+    </footer>
+</body>
+
+</html>
